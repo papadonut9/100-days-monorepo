@@ -245,3 +245,6 @@ Thumbs.db
 # Ignore all local history of files
 .history
 .ionide
+
+# Scratch file support
+scratch.*
