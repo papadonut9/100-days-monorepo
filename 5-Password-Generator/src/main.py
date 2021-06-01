@@ -10,7 +10,7 @@ symList = ['!', '@', '#', '$', '%', '^', '&', '*',
            '(', ')', '-', '_', '=', '+', '[', '{', ']', '}', '|',  ';', ':', '\'', '"', ',', '<', '.', '>', '/', '?', '`', '~']
 
 
-length = int(input('Enter the password length: ')) # Useless at this version
+# length = int(input('Enter the password length: ')) # Useless at this version
 charLength = int(
     input('Enter how many characters you want in your password: '))
 numLength = int(input('Enter how many numbers you want in your password: '))
@@ -28,10 +28,9 @@ for number in range(0, numLength):
 for symbol in range(0, symLength):
     generatedString.append(random.choice(symList))
 
-print('Generated password, now shuffling to increase entropy:')
-t.sleep(random.randint(2, 7))
-random.shuffle(generatedString)
 
+random.shuffle(generatedString)
+random.shuffle(generatedString)
 for character in generatedString:
     password += character
 print(f'Your generated password is: {password}')
