@@ -3,6 +3,10 @@
 ### Python implementation for the Hangman game
 
 ### Changelog:
+`v1.1.5 - Stable`
+  - Added Lives system. Every player will get 7 lives at beginning. 
+  - Pending Code refactoring. Will do that in a future patch.
+
 `v0.1.4 - Beta`
   - Fixed the input glitch
 
