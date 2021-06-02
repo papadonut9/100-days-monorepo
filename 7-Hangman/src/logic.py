@@ -7,49 +7,31 @@ wordList = ['laser', 'castaway', 'brunette', 'aftermath', 'czar', 'inquisition',
             'danerys', 'dolores', 'agenda', 'sophie', 'radiation', 'disorganized', 'zephyr', 'procrastinate', 'novelist', 'vandalize',
             'understand', 'download', 'continuum', 'enunciate', 'beckon', 'hamper', 'ruthless', 'accrete', 'hinder', 'dwell',
             'mountain', 'exacerbate', 'peril', 'propulsion', 'mushroom', 'trickle', 'incessant', 'insect', 'incest', 'genocide']
-customWordlist = []
 wordLisT = ['incense', 'star', 'peril', 'dwell']
 
 chosenWord = random.choice(wordLisT)
-print(chosenWord)       # Disable this in v0.1
-wordProgress = []
+print(chosenWord) 
+wordLength = len(chosenWord)
+print(wordLength)
+display = []
 
-for _ in chosenWord:
-    wordProgress.append('_')
-userWord = input('Enter your choice: ').lower()
+for _ in range(0, wordLength):
+    display.append('_')
+print(display)
 
-# chances = 7
-# isRight = False
+remaining = wordLength
+while remaining > 0:
+    userChar = input('Enter your choice: ').lower()
+
+    for position in range(wordLength):
+        if userChar == chosenWord[position]:
+            display[position] = userChar
+            remaining -= 1
+    print(display)
+    print(f'Characters remaining: {remaining}')
+
+print(display)
+print('You WIN')
 
 
-print(wordProgress)
-# while chances !=0:
-pos = 0
-for char in chosenWord:
-    if userWord == char:
-        print('Correct!')
-        wordProgress[pos] = userWord
-        # isRight = True
-        # chances = 0
-    else:
-        print(f'Incorrect!')
-        # chances -= 1
-        # userWord = input('Enter your choice: ').lower()
-    pos += 1
-    print(wordProgress)
-
-# if isRight == True:
-#     print('You won!')
-# else:
-#     print('You lost! ')
-
-""" # Use this to generate your own wordlist to replace mine
-
-wordLimit = 69
-for word in range(0, wordLimit):
-    customWordlist.append(input(f'{word}: '))
-
-print(customWordlist) """
-
-# v0.0.2 target
 
