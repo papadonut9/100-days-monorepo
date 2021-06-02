@@ -3,6 +3,9 @@
 ### Python implementation for the Hangman game
 
 ### Changelog:
+`v0.1.4 - Beta`
+  - Fixed the input glitch
+
 `v0.1.3 - Beta`
   - Updated input system.
   - The input system has a known glitch in which the user enters the correct character again, then the characters remaining also decreases.

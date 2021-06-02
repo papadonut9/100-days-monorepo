@@ -10,7 +10,7 @@ wordList = ['laser', 'castaway', 'brunette', 'aftermath', 'czar', 'inquisition',
 wordLisT = ['incense', 'star', 'peril', 'dwell']
 
 chosenWord = random.choice(wordLisT)
-print(chosenWord) 
+print(chosenWord)
 wordLength = len(chosenWord)
 print(wordLength)
 display = []
@@ -19,19 +19,18 @@ for _ in range(0, wordLength):
     display.append('_')
 print(display)
 
-remaining = wordLength
-while remaining > 0:
+isFinished = False
+
+while not isFinished:
     userChar = input('Enter your choice: ').lower()
 
     for position in range(wordLength):
         if userChar == chosenWord[position]:
             display[position] = userChar
-            remaining -= 1
+
     print(display)
-    print(f'Characters remaining: {remaining}')
-
-print(display)
-print('You WIN')
-
+    if '_' not in display:
+        isFinished = True
+        print('You WIN')
 
 
