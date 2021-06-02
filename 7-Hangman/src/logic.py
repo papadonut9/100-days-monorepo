@@ -11,29 +11,37 @@ customWordlist = []
 wordLisT = ['incense', 'star', 'peril', 'dwell']
 
 chosenWord = random.choice(wordLisT)
-print(chosenWord)                       # Disable this in v0.1
-userWord = input('Enter your choice: ')
-userWord = userWord.lower()
+print(chosenWord)       # Disable this in v0.1
+wordProgress = []
 
-chances = 7
-isRight = False
+for _ in chosenWord:
+    wordProgress.append('_')
+userWord = input('Enter your choice: ').lower()
 
-while chances != 0:
-    if userWord == chosenWord:
+# chances = 7
+# isRight = False
+
+
+print(wordProgress)
+# while chances !=0:
+pos = 0
+for char in chosenWord:
+    if userWord == char:
         print('Correct!')
-        isRight = True
-        chances = 0
+        wordProgress[pos] = userWord
+        # isRight = True
+        # chances = 0
     else:
-        chances -= 1
-        print(f'INcorrect answer. Chances remaining: {chances}')
-        userWord = input('Enter your choice: ')
-        userWord = userWord.lower()
+        print(f'Incorrect!')
+        # chances -= 1
+        # userWord = input('Enter your choice: ').lower()
+    pos += 1
+    print(wordProgress)
 
-
-if isRight == True:
-    print('You won!')
-else:
-    print('You lost! ')
+# if isRight == True:
+#     print('You won!')
+# else:
+#     print('You lost! ')
 
 """ # Use this to generate your own wordlist to replace mine
 
@@ -42,3 +50,6 @@ for word in range(0, wordLimit):
     customWordlist.append(input(f'{word}: '))
 
 print(customWordlist) """
+
+# v0.0.2 target
+
