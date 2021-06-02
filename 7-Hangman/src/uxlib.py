@@ -1,5 +1,4 @@
-class ux:
-  def start():
+def start(lines):
     print(""" 
     __  __                                                        
    / / / /  ____ _   ____     ____ _   ____ ___     ____ _   ____ 
@@ -8,6 +7,8 @@ class ux:
 /_/ /_/   \__,_/  /_/ /_/   \__, /  /_/ /_/ /_/   \__,_/  /_/ /_/ 
                            /____/                                 
 """)
+    for _ in range(0, lines):
+        print('')
 
 
 phases = ['''
