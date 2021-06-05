@@ -19,6 +19,9 @@ print("""
 
 """)
 
+
+
+mode = input('Enter encrypt/decrypt to continue: ')
 userText = input('Enter the text you want to encrypt: ')
 rot = int(input('Shift by how many letters?: '))
 
