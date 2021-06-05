@@ -1,0 +1,2 @@
+isFinished = False
+livesDepleted = False
