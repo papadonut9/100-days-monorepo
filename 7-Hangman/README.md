@@ -3,9 +3,17 @@
 ### Python implementation for the Hangman game
 
 ### Changelog:
+
+`v1.2.7 - Stable`
+
+- UX improvements
+- Compartmentalized code a bit
+- Fixed the glitch where if a player entered a character which is already guessed, the player will get a prompt which
+  notifies the user instead of straightaway deducting a life.
+
 `v1.1.6 - Stable`
 
-- Removed clutter and cleaned up the code a little bit.
+- Removed clutter and cleaned up the code a little.
 
 `v1.1.5 - Stable`
 
