@@ -1,5 +1,6 @@
 charList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-            'v', 'w', 'x', 'y', 'z']
+            'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']  # Repeated the list twice to avoid outOfIndex error
 
 
 # noinspection SpellCheckingInspection
@@ -15,5 +16,10 @@ def encrypt(data='', shift=0):
     for char in data:
         pos = charList.index(char)
         newPos = pos + shift
+        if newPos > 25:
+            newPos -= 26
         output += charList[newPos]
     return output
+
+# Test code
+# print(f'z\n{encrypt("z", 1)}')
