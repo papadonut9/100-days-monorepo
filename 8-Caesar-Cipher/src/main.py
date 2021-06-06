@@ -19,8 +19,14 @@ print("""
 
 """)
 
-mode = input('Enter encrypt/decrypt to continue: ')
-userText = input('Enter the text you want to encrypt: ')
+mode = input('Enter encrypt/decrypt to continue: ').lower()
+
+userText = input(f'Enter the text you want to {mode}: ')
 rot = int(input('Shift by how many letters?: '))
 
-print(logic.encrypt(userText, rot))
+if mode == 'encrypt':
+    print(logic.caesar(mode=mode, data=userText, shift=rot))
+elif mode == 'decrypt':
+    print(logic.caesar(mode=mode, data=userText, shift=rot))
+else:
+    print("INVALID INPUT")
