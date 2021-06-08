@@ -15,12 +15,18 @@ def caesar(mode='encrypt', data='', shift=0):
     """
     output = ''
 
+    if shift > 26:
+        shift = shift % 26
+
     if mode == 'decrypt':
         shift *= -1
     for char in data:
-        pos = charList.index(char)
-        newPos = pos + shift
-        output += charList[newPos]
+        if char in charList:
+            pos = charList.index(char)
+            newPos = pos + shift
+            output += charList[newPos]
+        else:
+            output += char
     return output
 
 
@@ -58,8 +64,3 @@ def decrypt(data='', shift=0):
             newPos += 25
         output += charList[newPos]
     return output
-
-
-# Test code
-print(f'a\n{caesar("encrypt","apple", 1)}')
-print(f"b\n{caesar('decrypt', 'bqqmf', 1)}")
