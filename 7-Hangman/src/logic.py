@@ -1,7 +1,8 @@
 import random
-import wordlist
-import uxlib
+
 import game
+import uxlib
+import wordlist
 
 lives = 7
 display = []
