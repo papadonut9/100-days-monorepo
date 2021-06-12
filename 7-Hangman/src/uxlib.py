@@ -1,6 +1,3 @@
-import game
-
-
 def start(lines):
     print(""" 
     __  __                                                        
